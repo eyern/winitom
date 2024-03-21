@@ -571,42 +571,25 @@
     <script>
       lightGallery(document.querySelector(".projects .box-container"));
     </script>
-    <script>
-      var url = 'https://wati-integration-prod-service.clare.ai/v2/watiWidget.js?42880';
-      var s = document.createElement('script');
-      s.type = 'text/javascript';
-      s.async = true;
-      s.src = url;
-      var options = {
-      "enabled":true,
-      "chatButtonSetting":{
-          "backgroundColor":"#00e785",
-          "ctaText":"Message us",
-          "borderRadius":"25",
-          "marginLeft": "0",
-          "marginRight": "20",
-          "marginBottom": "20",
-          "ctaIconWATI":false,
-          "position":"right"
-      },
-      "brandSetting":{
-          "brandName":"Winitom Builders",
-          "brandSubTitle":"undefined",
-          "brandImg":"https://www.wati.io/wp-content/uploads/2023/04/Wati-logo.svg",
-          "welcomeText":"Hi there!\nHow can I help you today?",
-          "messageText":"Hello, %0A I would like to book your services.",
-          "backgroundColor":"#00e785",
-          "ctaText":"Message us",
-          "borderRadius":"25",
-          "autoShow":false,
-          "phoneNumber":"254723461852"
-      }
-      };
-      s.onload = function() {
-          CreateWhatsappChatWidget(options);
-      };
-      var x = document.getElementsByTagName('script')[0];
-      x.parentNode.insertBefore(s, x);
-  </script>
+   <script
+   src="https://sleekflow.io/whatsapp-button.js"
+   async
+   onLoad="whatsappButton({
+   buttonName:'Message Us',
+   buttonIconSize: '22',
+   brandImageUrl:'https://sleekflow.io/static/images/sleekflow-icon.png',
+   buttonMargin:'true',
+   brandName:'Winitom',
+   brandSubtitleText:'Typically replies within minutes',
+   buttonSize:'regular',
+   buttonPosition:'right',
+   callToAction:'Start Chat',
+   phoneNumber:'254723461852',
+   welcomeMessage:'Hi there 👋\nhow can I help you today?',
+   prefillMessage:'Hi, I would like to book your services',
+   })"
+   >
+</script>
+
   </body>
 </html>
